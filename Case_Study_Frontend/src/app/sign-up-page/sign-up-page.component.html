@@ -1,0 +1,362 @@
+<div class="d-flex flex-row align-items-center justify-content-center ">You are a:
+  <button (click)="toggleFarmerShow()" type="button" class="btn btn-primary btn-lg mx-3">Farmer</button>
+  <button (click)="toggleDealerShow()" type="button" class="btn btn-secondary btn-lg mx-3">Dealer</button>
+</div>
+<div *ngIf="show === 'farmer'; then thenBlock ; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <section class="h-100 h-custom gradient-custom-2">
+    <form (ngSubmit)="onSubmit()">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12">
+            <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+              <div class="card-body p-0">
+                <div class="row g-0">
+                  <div class="col-lg-6">
+                    <div class="p-5">
+                      <h3 class="fw-normal mb-5" style="color: #4835d4;">Farmer Infomation</h3>
+
+
+
+                      <div class="row">
+                        <div class="col-md-6 mb-4 pb-2">
+
+                          <div class="form-outline">
+                            <input  type="text" id="fid" class="form-control form-control-lg" />
+                            <label class="form-label" for="fid">Farmer ID</label>
+                          </div>
+
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2">
+
+                          <div class="form-outline">
+                            <input [(ngModel)]="farmerCredentials.farmerEmail"
+                            name="farmerEmail"
+
+                             type="email" 
+                             id="farmerEmail" class="form-control form-control-lg" >
+                            <label class="form-label" for="femail">Email</label>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+                      <div class="mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input
+                          [(ngModel)]="farmerCredentials.farmerName"
+                          name="farmerName" 
+
+                          type="text" id="farmerName" class="form-control form-control-lg" />
+                          <label class="form-label" for="fname">Farmer Name</label>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                          <div class="form-outline">
+                            <input 
+                            [(ngModel)] = "farmerCredentials.farmerPassword" 
+                            name="farmerPassword" 
+                            type="password" id="farmerPassword" class="form-control form-control-lg" />
+                            <label class="form-label" for="fpass">Password</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                          <!-- <div class="form-outline">
+                            <input type="text" id="frpass" class="form-control form-control-lg" />
+                            <label class="form-label" for="frpass">Re Type Password</label>
+                          </div> -->
+                        </div>
+                      </div>
+                      <div class="mb-4 pb-2">
+
+
+
+                      </div>
+                      <div class="mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input [(ngModel)]="farmerCredentials.farmerBank" 
+                          name="farmerBank"
+                          type="text" id="farmerBank" class="form-control form-control-lg" />
+                          <label class="form-label" for="fbank">Farmer Bank</label>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-6 bg-indigo text-white">
+                    <div class="p-5">
+                      <h3 class="fw-normal mb-5">Contact Details</h3>
+
+                      <div class="mb-4 pb-2">
+                        <div class="form-outline form-white">
+                          <input [(ngModel)]="farmerCredentials.farmerPaytmId"
+                          name="farmerPaytmId"
+                          type="text" id="farmerPaytmId" class="form-control form-control-lg" />
+                          <label class="form-label" for="fpaytmid">Paytm / UPI ID</label>
+                        </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col-md-5 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
+                            <input [(ngModel)]="farmerCredentials.farmerAccountNo"
+                            name="farmerAccountNo" 
+                            type="number" id="farmerAccountNo" class="form-control form-control-lg" />
+                            <label class="form-label" for="faccountno">Account Number</label>
+                          </div>
+
+                        </div>
+                        <div class="col-md-7 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
+                            <input
+                            [(ngModel)]="farmerCredentials.farmerBankBranch"
+                            name="farmerBankBranch"
+                            type="text" id="farmerBankBranch" class="form-control form-control-lg" />
+                            <label class="form-label" for="fbankbranch">Bank Branch</label>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col-md-5 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
+                            <input 
+                            [(ngModel)]="farmerCredentials.farmerContact"
+                            name="farmerContact"
+                            type="number" id="farmerContact" class="form-control form-control-lg" />
+                            <label class="form-label" for="fcontact">Contact Number</label>
+                          </div>
+
+                        </div>
+                        <div class="col-md-7 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
+                            <input
+                            [(ngModel)]="farmerCredentials.farmerLocation"
+                            name="farmerLocation" 
+                            type="text" id="farmerLocation" class="form-control form-control-lg" />
+                            <label class="form-label" for="flocation">Location</label>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="mb-4">
+                        <div class="form-outline form-white">
+                          <input
+                          [(ngModel)]="farmerCredentials.farmerAbout"
+                          name="farmerAbout"
+                          type="text" id="farmerAbout" class="form-control form-control-lg" />
+                          <label class="form-label" for="fabout">About You</label>
+                        </div>
+                      </div>
+
+
+
+                      <button type="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
+                      <button type="reset" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Reset</button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+
+</ng-template>
+<ng-template #elseBlock>
+  <section class="h-100 h-custom gradient-custom-2">
+    <form (ngSubmit)="onSubmit()" >
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12">
+            <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+              <div class="card-body p-0">
+                <div class="row g-0">
+                  <div class="col-lg-6">
+                    <div class="p-5">
+                      <h3 class="fw-normal mb-5" style="color: #4835d4;">Dealer Infomation</h3>
+
+
+
+                      <div class="row">
+                        <div class="col-md-6 mb-4 pb-2">
+
+                          <div class="form-outline">
+                            <input type="text" id="dealerid" class="form-control form-control-lg" />
+                            <label class="form-label" for="dealerid">Dealer ID</label>
+                          </div>
+
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2">
+
+                          <div class="form-outline">
+                            <input 
+                            [(ngModel)]="dealerCredentials.dealerEmail"
+                            name="dealerEmail"
+                            type="email" id="dealerEmail" class="form-control form-control-lg" />
+                            <label class="form-label" for="dealeremail">Dealer Email</label>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+                      <div class="mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input 
+                          [(ngModel)]="dealerCredentials.dealerName"
+                          name="dealerName"
+                          type="text" id="dealerName" class="form-control form-control-lg" />
+
+                          <label class="form-label" for="dealername">Dealer Name</label>
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                          <div class="form-outline">
+                            <input 
+                            [(ngModel)]="dealerCredentials.dealerPassword"
+                            name="dealerPassword"
+                            type="password" id="dealerPassword" class="form-control form-control-lg" />
+                            <label class="form-label" for="dealerpass">Password</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+
+                          <!-- <div class="form-outline">
+                            <input type="text" id="drpass" class="form-control form-control-lg" />
+                            <label class="form-label" for="drpass">Re Type Password</label>
+                          </div> -->
+                        </div>
+                      </div>
+                      <div class="mb-4 pb-2">
+
+                        <div class="form-outline">
+                          <input 
+                          [(ngModel)]="dealerCredentials.dealerContact"
+                          name="dealerContact"
+
+                          type="number" id="dealerContact" class="form-control form-control-lg" />
+                          <label class="form-label" for="dealerphone">Dealer Phone</label>
+                        </div>
+
+                      </div>
+                      <div class="mb-4 pb-2">
+
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-6 bg-indigo text-white">
+                    <div class="p-5">
+                      <h3 class="fw-normal mb-5">Contact Details</h3>
+
+                      <div class="mb-4 pb-2">
+                        <div class="form-outline form-white">
+                          <input 
+                          [(ngModel)]="dealerCredentials.dealerPaytmId"
+                          name="dealerPaytmId"
+                          type="text" id="dealerPaytmId" class="form-control form-control-lg" />
+                          <label class="form-label" for="dealerpaytmid">Paytm / UPI ID</label>
+                        </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col-md-5 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
+                            <input [(ngModel)]="dealerCredentials.dealerLocation"
+                            name="dealerLocation"
+                            type="text" id="dealerLocation" class="form-control form-control-lg" />
+                            <label class="form-label" for="dealerlocation">Dealer Location</label>
+                          </div>
+
+                        </div>
+                        <div class="col-md-7 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
+                            <input
+                            [(ngModel)]="dealerCredentials.dealerBank"
+                            name="dealerBank"
+                            type="text" id="dealerBank" class="form-control form-control-lg" />
+                            <label class="form-label" for="dealerbank">Dealer Bank</label>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col-md-5 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
+                            <input 
+                            [(ngModel)]="dealerCredentials.dealerBankBranch"
+                            name="dealerBankBranch"
+                            type="text" id="dealerBankBranch" class="form-control form-control-lg" />
+                            <label class="form-label" for="dealerbranch">Dealer Bank Branch</label>
+                          </div>
+
+                        </div>
+                        <div class="col-md-7 mb-4 pb-2">
+
+                          <div class="form-outline form-white">
+                            <input 
+                            [(ngModel)]="dealerCredentials.dealerAccountNo"
+                            name="dealerAccountNo"
+
+                            type="text" id="dealeraccountno" class="form-control form-control-lg" />
+                            <label class="form-label" for="dealeraccountno">Account Number</label>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+
+
+                      <button type="submit" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Register</button>
+                      <button type="reset" class="btn btn-light btn-lg" data-mdb-ripple-color="dark">Reset</button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</ng-template>

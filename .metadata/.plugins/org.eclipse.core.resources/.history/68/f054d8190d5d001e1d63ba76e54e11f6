@@ -1,0 +1,37 @@
+package com.example.springsecurity.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.springsecurity.model.Farmer;
+
+
+
+public class FarmerService {
+	@Autowired
+	RestTemplate restTemplate;
+	
+	public ResponseEntity<String> addFarmer(String fid, Farmer farmer)
+	{
+//		Crops crops = restTemplate.getForObject("http://Crop-Service/addCrop", Crops.class);
+//		return "added";
+		HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<Farmer> request = new HttpEntity<>(farmer, headers);
+
+        ResponseEntity<String> response = restTemplate.postForEntity(
+        		"http://Farmer-Service/farmer/addFarmer",
+            request,
+            String.class
+        );
+
+        // Handle the response as needed
+        return response;
+	}
+	
+}

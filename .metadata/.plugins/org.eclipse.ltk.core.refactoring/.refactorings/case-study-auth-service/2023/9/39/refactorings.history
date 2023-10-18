@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.example.springsecurity.service.farmerService&apos; to &apos;FarmerService&apos;&#x0D;&#x0A;- Original project: &apos;case-study-auth-service&apos;&#x0D;&#x0A;- Original element: &apos;com.example.springsecurity.service.farmerService&apos;&#x0D;&#x0A;- Renamed element: &apos;com.example.springsecurity.service.FarmerService&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;farmerService&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.springsecurity.service{farmerService.java[farmerService" matchStrategy="1" name="FarmerService" qualified="false" references="true" similarDeclarations="false" stamp="1695801004533" textual="false" version="1.0"/>
+</session>

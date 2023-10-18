@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.dealer.model.FarmerList"/>
+    <fullyQualifiedTypeName name="com.dealer.repository.CropListRepository"/>
+    <fullyQualifiedTypeName name="com.dealer.services.DealerService"/>
+    <fullyQualifiedTypeName name="com.dealer.model.DealerList"/>
+    <fullyQualifiedTypeName name="com.dealer.model.Dealer"/>
+    <fullyQualifiedTypeName name="com.dealer.model.CropsList"/>
+    <fullyQualifiedTypeName name="com.dealer.model.Crops"/>
+    <fullyQualifiedTypeName name="com.dealer.repository.DealerRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.security.access.prepost.PreAuthorize"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="com.farmer.service.FarmerService"/>
+    <fullyQualifiedTypeName name="com.farmer.repository.FarmerRepository"/>
+    <fullyQualifiedTypeName name="com.farmer.model.FarmerList"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.client.loadbalancer.LoadBalanced"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
+    <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+    <fullyQualifiedTypeName name="com.farmer.model.Crops"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="com.example.springsecurity.entity.UserInfo"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.example.springsecurity.model.AuthRequest"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpEntity"/>
+    <fullyQualifiedTypeName name="com.farmer.model.Farmer"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="com.example.springsecurity.model.Farmer"/>
+    <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.example.springsecurity.service.FarmerService"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+</qualifiedTypeNameHistroy>
